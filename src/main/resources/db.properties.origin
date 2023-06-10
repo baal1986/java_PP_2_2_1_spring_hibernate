@@ -3,6 +3,8 @@ db.driver=
 db.url=
 db.username=
 db.password=
+db.dialect=
+db.current_session_context_class=
 
 # Hibernate properties
 hibernate.show_sql=
