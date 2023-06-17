@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -26,4 +27,8 @@ public class UserServiceImp implements UserService {
       return userDao.listUsers();
    }
 
+   @Transactional(readOnly = true)
+   public Optional<User> searchUser(String model, int series){
+      return userDao.searchUser(model, series);
+   }
 }

@@ -1,6 +1,5 @@
 package hiber.model;
 
-
 import javax.persistence.*;
 
 @Entity
@@ -14,9 +13,10 @@ public class Car {
     private Long id;
 
     @Column(name = "model")
-    String model;
+    private String model;
     @Column(name = "series")
-    int series;
+    private int series;
+
 
     public Car(String model, int series) {
         this.model = model;
@@ -45,5 +45,13 @@ public class Car {
 
     public int getSeries() {
         return series;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                ", model='" + model + '\'' +
+                ", series=" + series +
+                '}';
     }
 }
